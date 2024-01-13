@@ -1,0 +1,29 @@
+drag the box
+
+마우스가 눌리면
+	현재 마우스 위치를 mousePos로 지정
+	모든 dialog에 대해
+		down(마우스 위치)를 호출
+			dialog안에 마우스가 있는지 확인하고
+				isDown -> true
+				startPos -> dialog의 pos
+				downPos -> 마우스 위치
+				mousePos -> 마우스 위치 - dialog의 위치 = 상댓값?
+		item 있다면
+			curItem을 지정
+			인덱스 추출
+			가장 최근에 변경된 것으로 순서 변경
+			break
+
+마우스가 움직이면
+	현재 마우스 위치를 mousePos로 지정
+	모든 diaog에 대해
+		move(마우스 위치)를 호출
+			위치 변화만큼 target 위치 설정
+
+마우스가 떨어지면
+	curItem 비우기
+
+	모든 아이템의 isDown -> false
+
+
